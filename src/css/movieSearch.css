@@ -1,0 +1,295 @@
+/* Estilos generales */
+body {
+  font-family: 'Tilt Neon', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000910;
+  color: rgb(255, 255, 255);
+}
+
+.viewtrailer{
+  min-height: 740px;
+  background-size: 100%;
+  background-position:center;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.container-info {
+  background: rgb(0, 9, 16);
+  background: linear-gradient(0deg, rgba(0, 9, 16, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100vw;
+}
+
+@keyframes animacion-boton {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.boton {
+  background-color: #000910;
+  color: white;
+  outline: none;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+@media (min-width: 768px) {
+  .boton {
+    animation: animacion-boton 0.5s ease forwards;
+    animation-delay: 0.75s;
+  }
+}
+
+.reproductor{
+  width: 75%;
+  height: 500px;
+}
+
+@keyframes animacion-banner {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.banner-info {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: animacion-banner 0.5s ease forwards;
+  animation-delay: 0.5s;
+}
+
+
+.container {
+  padding: 20px;
+}
+
+h3{
+  margin: 2.5% 0;
+  font-size: 150%;
+}
+
+h3 i{
+  color: rgb(25, 55, 90);
+}
+
+/* ------------- MOVIE CARD -------- */
+
+.movie-card{
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+
+  height: 65vh;
+  padding: 0;
+  display: flex;
+}
+
+.movie-card:hover{
+  border: 2px solid white;
+  border-radius: 20% 0;
+  background-size: 100%;
+  transition: 0.5s ease;
+}
+
+/* h4{
+  background: rgb(0,9,16);
+  background: linear-gradient(0deg, rgba(0,9,16,1) 4%, rgba(255,255,255,0) 35%);
+
+  height: auto;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+} */
+
+/* h4:hover{
+  transition: 0.2s ease;
+} */
+
+/*--- DISPLAY ---*/
+
+.show{
+  display: block;
+}
+
+.none{
+  display: none;
+}
+
+ /*---------------- HEADER APP ----------------*/
+
+.header{
+  background: rgb(0,9,16);
+  background: linear-gradient(180deg, rgba(0,9,16,1) 0%, rgba(255,255,255,0) 100%);
+
+  width: 100vw;
+  position: fixed;
+  top: 0;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  margin-top: 0;
+  margin-left: 0;
+  padding: 0;
+}
+
+.collap{
+  display: none;
+  position:fixed;
+}
+
+.collap i{
+  font-size: 150%;
+}
+
+.app-title{
+  font-size: 250%;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+nav{
+  min-width: 35%;
+}
+
+ul{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 5%;
+  padding: 0;
+}
+
+li{cursor: pointer  ;}
+
+h2{
+  font-size: 250%;
+}
+
+form i{
+  margin-top: 5%;
+  font-size: 150%;
+}
+
+form{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.search{
+  width: 20vw;
+}
+
+input{
+  color: white;
+  padding: 0% 4%;
+  border: none;
+  background-color: transparent;
+  margin-right: 4%;
+  width: 100%;
+
+  padding: 2% 4%;
+  border-bottom: 3px solid white;
+  border-radius: 2.5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button{
+  border: none;
+  background-color: transparent;
+  color: white;
+}
+
+/* ---------------- MOVIL VIEW -------------- */
+
+@media (max-width: 991.5px){
+  .collap{
+    display: block;
+    position:relative;
+  }
+
+  nav{
+    background: rgb(4,24,42);
+    background: linear-gradient(90deg, rgba(4,24,42,0.8352591036414566) 100%, rgba(255,255,255,0) 100%);
+
+    display: none;
+    position: fixed;
+    top: 140px;
+    left: 12.5%;
+    width: 75%;
+    height: 57.5px;
+    
+    border: 2px solid white;
+    border-radius: 10px;
+  }
+
+  ul{
+    margin: 2% 5%;
+  }
+
+  li{
+    margin-bottom: 10%;
+  }
+
+  .title{
+    position: fixed;
+    left: 25%;
+    width: 50%;
+
+    text-align: center;
+  }
+
+  .app-title{
+    font-size: 200%;
+  }
+
+  input{
+    background: rgb(4,24,42);
+    background: linear-gradient(0deg, rgba(4,24,42,0.7232142857142857) 41%, rgba(255,255,255,0) 100%);
+
+    text-align: center;
+    padding-bottom: 1%;
+    left: 12.5%;
+    top: 80px;
+    width: 75%;
+    position: fixed;
+  }
+}
+
+@media (max-width: 625px){
+  nav{
+    height: 50px;
+  }
+}
