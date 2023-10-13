@@ -17,7 +17,7 @@ export const fetchMovies = async (API_URL, API_KEY, searchKey, setMovies, setMov
       if (results && results.length === 0) {
         throw new Error("Not movies found!");
       }
-
+      console.log(results);
       setMovies(results);
       setMovie(results[0]);
 

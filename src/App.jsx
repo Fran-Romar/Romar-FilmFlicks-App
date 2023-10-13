@@ -4,8 +4,8 @@ import { Navigate, Route, Routes } from "react-router-dom";
 
 import "./css/movieSearch.css";
 
-import MovieSearchApp from "./routes/MovieSearchApp";
 import Header from "./components/Header";
+import MovieSearchApp from "./routes/MovieSearchApp";
 
 export default function App() {
   const API_URL = "https://api.themoviedb.org/3";

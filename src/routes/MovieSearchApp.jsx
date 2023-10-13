@@ -38,7 +38,7 @@ export default function MovieSearchApp({
       />
       <Container>
         <h3 className="h3-animado">
-          <i className="fa fa-film"></i> TOP MOVIES
+          <i className="fa fa-film"></i> MOVIES
         </h3>
         <MovieCard
           API_URL={API_URL}

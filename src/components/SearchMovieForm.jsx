@@ -12,7 +12,8 @@ export default function SearchMovieForm({
   setMovie,
   setTrailer,
 }) {
-  const [show, setShow] = useState(true);
+  const width = window.innerWidth;
+  const [show, setShow] = useState(width >= 991.5 ? true : false);
 
   return (
     <form
