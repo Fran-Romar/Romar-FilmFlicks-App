@@ -22,9 +22,7 @@ export default function MovieCard({
           onClick={() =>
             selectMovie(movie, API_URL, API_KEY, setTrailer, setMovie)
           }
-        >
-          {/* <h4>{movie.title}</h4> */}
-        </Col>
+        ></Col>
       ))}
     </Row>
   );

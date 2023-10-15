@@ -23,10 +23,13 @@ export default function BannerInfo({ trailer, setPlaying, movie }) {
           )}
           <div className="banner-info">
             <h1 className="text-white">{movie.title}</h1>
-            <p style={{ fontStyle: "italic" }}>
+            <p style={{ fontStyle: "italic", fontSize: "120%" }}>
+              Release date: {movie.release_date}
+            </p>
+            <p style={{ fontStyle: "italic", fontSize: "110%" }}>
               Movie rating: {movieAverage(movie.vote_average)}
             </p>
-            <p className="text-white w-50">{movie.overview}</p>
+            <p className="movie-description">{movie.overview}</p>
           </div>
         </div>
       </div>

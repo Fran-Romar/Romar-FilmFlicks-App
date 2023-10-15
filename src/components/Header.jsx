@@ -18,7 +18,7 @@ export default function Header({
         <header>
           <div className="title">
             <a href="/" className="app-title">
-              MOVIEHAVEN
+              FILMFLICKS
             </a>
           </div>
           <div className="search">

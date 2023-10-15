@@ -9,8 +9,9 @@ body {
 
 .viewtrailer{
   min-height: 740px;
-  background-size: 100%;
+  background-size: cover;
   background-position:center;
+  background-repeat: no-repeat;
 
   display: flex;
   align-items: flex-end;
@@ -45,13 +46,8 @@ body {
 
   opacity: 0;
   transform: translateX(20px);
-}
-
-@media (min-width: 768px) {
-  .boton {
-    animation: animacion-boton 0.5s ease forwards;
-    animation-delay: 0.75s;
-  }
+  animation: animacion-boton 0.5s ease forwards;
+  animation-delay: 0.75s;
 }
 
 .reproductor{
@@ -77,6 +73,10 @@ body {
   animation-delay: 0.5s;
 }
 
+.movie-description{
+  width: 50%;
+  text-align: justify;
+}
 
 .container {
   padding: 20px;
@@ -98,7 +98,9 @@ h3 i{
   background-size: 90%;
   background-position: center;
 
-  height: 65vh;
+  margin-bottom: 3%;
+
+  height: 60vh;
   padding: 0;
   display: flex;
 }
@@ -139,6 +141,7 @@ header{
   margin-top: 0;
   margin-left: 0;
   padding: 0;
+  max-height: 75px;
 }
 
 .app-title{
@@ -202,15 +205,20 @@ input:focus {
   outline: none;
 }
 
-button{
-  border: none;
-  background-color: transparent;
-  color: white;
-}
-
 /* ---------------- MOVIL VIEW -------------- */
 
+@media (max-width: 1199.5px){
+  
+  /* ----- CARD ----- */
+
+  .movie-card{
+    height: 53vh;
+  }
+}
+
 @media (max-width: 991.5px){
+
+  /* ----- HEADER ----- */
 
   ul{
     margin: 2% 5%;
@@ -247,6 +255,51 @@ button{
     top: 80px;
     width: 75%;
     position: fixed;
+  }
+
+  /* ----- BANNER ----- */
+
+  .viewtrailer{
+    min-height: 672px;
+  }
+
+  .boton{
+    padding: 7.5px 12.5px;
+  }
+
+  .movie-description{
+    width: 100%;
+  }
+
+  .reproductor{
+    width: 100%;
+    height: 400px;
+  }
+
+  /* ----- CARD ----- */
+
+  .movie-card{
+    height: 36vh;
+  }
+}
+
+@media (max-width: 767.5px){
+
+  /* ----- CARD ----- */
+
+  .movie-card{
+    width: 50%;
+    height: 54vh;
+  }
+}
+
+@media (max-width: 575.5px){
+
+  /* ----- CARD ----- */
+
+  .movie-card{
+    background-size: 90%;
+    height: 263px;
   }
 }
 
