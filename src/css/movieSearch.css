@@ -10,7 +10,7 @@ body {
 .viewtrailer{
   min-height: 740px;
   background-size: cover;
-  background-position:center;
+  background-position:center; 
   background-repeat: no-repeat;
 
   display: flex;
@@ -305,7 +305,7 @@ input:focus {
 
 @media (max-width: 440px){
   .title{
-    left: 6.5%;
+    left: 1%;
   }
 
   .app-title{font-size: 200%;}
