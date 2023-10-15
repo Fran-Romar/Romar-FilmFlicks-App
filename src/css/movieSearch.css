@@ -189,7 +189,28 @@ form{
   margin-bottom: 1.25%;
 }
 
-input{
+@keyframes aparecer-x {
+  from {
+    opacity: 0;
+    transform: translateX(75px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+}@keyframes aparecer-y {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+input {
   font-size: 120%;
   color: white;
   padding: 0 4%;
@@ -197,11 +218,11 @@ input{
   background-color: transparent;
   margin-right: 4%;
   width: 100%;
-
-  padding: 0% 4%;
   border-bottom: 3px solid white;
   border-radius: 2.5px;
+  animation: aparecer-x 0.5s ease forwards;
 }
+
 
 input:focus {
   outline: none;
@@ -257,6 +278,7 @@ input:focus {
     top: 80px;
     width: 75%;
     position: fixed;
+    animation: aparecer-y 0.5s ease forwards;
   }
 
   /* ----- BANNER ----- */
