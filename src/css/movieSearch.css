@@ -100,7 +100,7 @@ h3 i{
 
   margin-bottom: 3%;
 
-  height: 60vh;
+  height: 420px;
   padding: 0;
   display: flex;
 }
@@ -131,6 +131,8 @@ h3 i{
   width: 100vw;
   position: fixed;
   top: 0;
+
+  z-index: 1000;
 }
 
 header{
@@ -212,7 +214,7 @@ input:focus {
   /* ----- CARD ----- */
 
   .movie-card{
-    height: 53vh;
+    height: 320px;
   }
 }
 
@@ -279,7 +281,7 @@ input:focus {
   /* ----- CARD ----- */
 
   .movie-card{
-    height: 36vh;
+    height: 240px;
   }
 }
 
@@ -289,7 +291,8 @@ input:focus {
 
   .movie-card{
     width: 50%;
-    height: 54vh;
+    height: 355px;
+    margin-bottom: 5%;
   }
 }
 
@@ -299,7 +302,7 @@ input:focus {
 
   .movie-card{
     background-size: 90%;
-    height: 263px;
+    height: 245px;
   }
 }
 
