@@ -23,6 +23,12 @@ body {
   width: 100vw;
 }
 
+.yt{
+  background: rgb(0, 9, 16);
+  background: linear-gradient(0deg, rgba(0, 9, 16, 1) 0%, rgba(255, 255, 255, 0) 100%);
+  width: 100vw;
+}
+
 @keyframes animacion-boton {
   from {
     opacity: 0;
@@ -93,7 +99,7 @@ h3 i{
 
 /* ------------- MOVIE CARD -------- */
 
-@keyframes show {
+/* @keyframes show {
   from{
     opacity: 0;
     scale: 25%;
@@ -103,16 +109,18 @@ h3 i{
     opacity: 1;
     scale: 100%;
   }
-}
+} */
+
+/* NO VA BIEN DEL TODO (SE LAGEA LA PAGINA) */
 
 .movie-card{
-  view-timeline-name: --revealing-image;
+  /* view-timeline-name: --revealing-image;
 
   animation-name: show;
   animation-fill-mode: both;
   animation-timeline: --revealing-image;
 
-  animation-range: entry 40% cover 50%;
+  animation-range: entry 40% cover 50%; */
 
   background-repeat: no-repeat;
   background-size: 90%;
@@ -349,6 +357,12 @@ input:focus {
 }
 
 @media (max-width: 440px){
+
+  .reproductor{
+    padding: 0;
+    padding-bottom: 5%;
+  }
+
   .title{
     left: 1%;
   }
