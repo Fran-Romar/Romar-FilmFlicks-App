@@ -93,7 +93,27 @@ h3 i{
 
 /* ------------- MOVIE CARD -------- */
 
+@keyframes show {
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+
+  to{
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
 .movie-card{
+  view-timeline-name: --revealing-image;
+
+  animation-name: show;
+  animation-fill-mode: both;
+  animation-timeline: --revealing-image;
+
+  animation-range: entry 40% cover 50%;
+
   background-repeat: no-repeat;
   background-size: 90%;
   background-position: center;
