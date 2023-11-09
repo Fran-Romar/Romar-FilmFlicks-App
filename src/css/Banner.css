@@ -1,0 +1,119 @@
+/* Banner */
+
+.viewtrailer{
+    min-height: 740px;
+    background-size: cover;
+    background-position:center; 
+    background-repeat: no-repeat;
+  
+    display: flex;
+    align-items: flex-end;
+}
+  
+.container-info {
+    background: rgb(0, 9, 16);
+    background: linear-gradient(0deg, rgba(0, 9, 16, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100vw;
+}
+  
+.yt{
+    background: rgb(0, 9, 16);
+    background: linear-gradient(0deg, rgba(0, 9, 16, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    width: 100vw;
+}
+  
+@keyframes animacion-boton {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+.boton {
+    background-color: #000910;
+    color: white;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  
+    opacity: 0;
+    transform: translateX(20px);
+    animation: animacion-boton 0.5s ease forwards;
+    animation-delay: 0.75s;
+}
+  
+.reproductor{
+    width: 75%;
+    height: 500px;
+}
+  
+@keyframes animacion-banner {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+  
+.banner-info {
+    opacity: 0;
+    transform: translateX(20px);
+    animation: animacion-banner 0.5s ease forwards;
+    animation-delay: 0.5s;
+}
+  
+.movie-description{
+    width: 50%;
+    text-align: justify;
+}
+  
+.container {
+    padding: 20px;
+}
+  
+h3{
+    margin: 2.5% 0;
+    font-size: 150%;
+}
+  
+h3 i{
+    color: rgb(25, 55, 90);
+}
+
+/* Media Query */
+
+@media (max-width: 991.5px){
+    .viewtrailer{
+      min-height: 672px;
+    }
+  
+    .boton{
+      padding: 7.5px 12.5px;
+    }
+  
+    .movie-description{
+      width: 100%;
+    }
+  
+    .reproductor{
+      width: 100%;
+      height: 400px;
+    }
+}
+  
+@media (max-width: 440px){  
+    .reproductor{
+      padding: 0;
+      padding-bottom: 5%;
+    }
+}

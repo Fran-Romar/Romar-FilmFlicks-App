@@ -2,10 +2,9 @@ import React from "react";
 import SearchMovieForm from "./SearchMovieForm";
 
 import { Container } from "react-bootstrap";
+import "../css/Header.css";
 
 export default function Header({
-  API_URL,
-  API_KEY,
   searchKey,
   setSearchKey,
   setMovies,
@@ -23,8 +22,6 @@ export default function Header({
           </div>
           <div className="search">
             <SearchMovieForm
-              API_URL={API_URL}
-              API_KEY={API_KEY}
               searchKey={searchKey}
               setSearchKey={setSearchKey}
               setMovies={setMovies}

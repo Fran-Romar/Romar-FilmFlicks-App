@@ -4,13 +4,11 @@ import YouTube from "react-youtube";
 
 import BannerInfo from "./BannerInfo";
 
-export default function MovieBanner({
-  IMAGE_PATH,
-  movie,
-  playing,
-  setPlaying,
-  trailer,
-}) {
+import general from "../../data/general.json";
+
+import "../css/Banner.css";
+
+export default function MovieBanner({ movie, playing, setPlaying, trailer }) {
   return (
     <div>
       <main>
@@ -18,7 +16,7 @@ export default function MovieBanner({
           <div
             className="viewtrailer"
             style={{
-              backgroundImage: `url("${IMAGE_PATH}${movie.backdrop_path}")`,
+              backgroundImage: `url("${general.IMAGE_PATH}${movie.backdrop_path}")`,
             }}
           >
             {playing ? (

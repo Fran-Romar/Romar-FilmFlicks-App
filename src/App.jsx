@@ -2,17 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import "./css/movieSearch.css";
+import "./css/MovieSearch.css";
 
 import Header from "./components/Header";
 import MovieSearchApp from "./routes/MovieSearchApp";
 
 export default function App() {
-  const API_URL = "https://api.themoviedb.org/3";
-  const API_KEY = "edea8f75d9c6fae0518607c06c5d0aca";
-  const IMAGE_PATH = "https://image.tmdb.org/t/p/original";
-  const URL_IMAGE = "https://image.tmdb.org/t/p/original";
-
   const [movie, setMovie] = useState({ title: "loading movies" });
   const [movies, setMovies] = useState([]);
   const [searchKey, setSearchKey] = useState("");
@@ -22,8 +17,6 @@ export default function App() {
   return (
     <>
       <Header
-        API_URL={API_URL}
-        API_KEY={API_KEY}
         searchKey={searchKey}
         setSearchKey={setSearchKey}
         setMovies={setMovies}
@@ -35,10 +28,6 @@ export default function App() {
           path="/"
           element={
             <MovieSearchApp
-              API_KEY={API_KEY}
-              API_URL={API_URL}
-              IMAGE_PATH={IMAGE_PATH}
-              URL_IMAGE={URL_IMAGE}
               movie={movie}
               setMovie={setMovie}
               movies={movies}

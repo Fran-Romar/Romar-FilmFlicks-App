@@ -27,4 +27,4 @@ export const fetchMovies = async (API_URL, API_KEY, searchKey, setMovies, setMov
     } catch (error) {
       console.log(error);
     }
-  };
+};

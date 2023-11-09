@@ -1,0 +1,50 @@
+/* Movie Card */
+
+.movie-card{
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: center;
+  
+    margin-bottom: 3%;
+  
+    height: 420px;
+    padding: 0;
+    display: flex;
+  
+    transition: all 0.5s ease;
+}
+
+.movie-card:hover{
+    border: 2px solid white;
+    border-radius: 20% 0;
+    background-size: 100%;
+}
+
+/* Media Query */
+
+@media (max-width: 1199.5px){  
+    .movie-card{
+      height: 320px;
+    }
+  }
+  
+@media (max-width: 991.5px){
+    .movie-card{
+        height: 240px;
+    }
+}
+  
+@media (max-width: 767.5px){
+    .movie-card{
+      width: 50%;
+      height: 355px;
+      margin-bottom: 5%;
+    }
+}
+  
+@media (max-width: 575.5px){
+    .movie-card{
+      background-size: 90%;
+      height: 245px;
+    }
+}

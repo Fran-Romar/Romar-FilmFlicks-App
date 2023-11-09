@@ -1,27 +1,26 @@
 import React from "react";
 import { useState } from "react";
 
+import general from "../../data/general.json";
+
 import { searchMovies } from "../helpers/movieFunctions";
 
 export default function SearchMovieForm({
   setSearchKey,
-  API_KEY,
-  API_URL,
   searchKey,
   setMovies,
   setMovie,
   setTrailer,
 }) {
-  const width = window.innerWidth;
-  const [show, setShow] = useState(width >= 991.5 ? true : false);
+  const [show, setShow] = useState(false);
 
   return (
     <form
       onSubmit={(e) =>
         searchMovies(
           e,
-          API_URL,
-          API_KEY,
+          general.API_URL,
+          general.API_KEY,
           searchKey,
           setMovies,
           setMovie,

@@ -7,11 +7,9 @@ import MovieCard from "../components/MovieCard";
 
 import { fetchMovies } from "../helpers/fetchMovies";
 
+import general from "../../data/general.json";
+
 export default function MovieSearchApp({
-  API_KEY,
-  API_URL,
-  IMAGE_PATH,
-  URL_IMAGE,
   movie,
   setMovie,
   movies,
@@ -24,13 +22,19 @@ export default function MovieSearchApp({
 }) {
   // API call
   useEffect(() => {
-    fetchMovies(API_URL, API_KEY, searchKey, setMovies, setMovie, setTrailer);
+    fetchMovies(
+      general.API_URL,
+      general.API_KEY,
+      searchKey,
+      setMovies,
+      setMovie,
+      setTrailer
+    );
   }, []);
 
   return (
     <div>
       <MovieBanner
-        IMAGE_PATH={IMAGE_PATH}
         movie={movie}
         playing={playing}
         trailer={trailer}
@@ -41,9 +45,6 @@ export default function MovieSearchApp({
           <i className="fa fa-film"></i> MOVIES
         </h3>
         <MovieCard
-          API_URL={API_URL}
-          API_KEY={API_KEY}
-          URL_IMAGE={URL_IMAGE}
           movies={movies}
           setTrailer={setTrailer}
           setMovie={setMovie}
